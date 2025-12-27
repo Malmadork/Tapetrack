@@ -1,0 +1,155 @@
+body {
+    overflow: hidden;
+}
+
+.content {
+    height: 90vh;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.section {
+    margin: 2.5%;
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.section-albums {
+    flex-grow: 1;
+}
+
+.listCarousel {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 10px 15px;
+    
+    flex-wrap: nowrap;
+
+    .listItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex: 0 0 calc(33% - 10px); */
+        border: 1px solid var(--border-dark-primary);
+        border-radius: 5px;
+        padding: 5px 10px;
+        
+        
+        h2 {
+            font-size: 16px;
+            text-wrap-mode: nowrap;
+        }
+    }
+
+    .listItem.selected {
+        background-color: var(--container-dark-primary);
+    }
+
+    
+}
+
+.emptyList {
+    margin: auto;
+}
+
+.listAlbums {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    padding: 0 4px;
+    height: 100%;
+    
+    flex-wrap: wrap;
+
+    .album-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 calc(33% - 10px);
+        
+        .cover-art {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            padding: 4px 0;
+            justify-content: center;
+        }
+
+        img.cover-art {
+            padding: 0px 0;
+        }
+
+        .cover-art-single {
+            flex: 0 0 calc(50% - 5px);
+            box-sizing: border-box;
+            width: calc(50% - 5px);
+            border-radius: 15%;
+            align-self: center;
+        }
+        
+        h1 {
+            font-size: 16px;
+            /* text-wrap-mode: nowrap; */
+        }
+    }
+
+    
+}
+
+.dropdown {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.section-filter {
+  display: none;
+  justify-content: flex-end;
+
+  i {
+    color: var(--accent-dark-primary);
+  }
+}
+
+.cover-art { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dropdown-menu, .listItem {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 825px) {
+    .content {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .section, .listList {
+        scrollbar-width: none;
+        margin: 15px;
+    }
+
+    .listCarousel {
+        scrollbar-width: none;
+    }
+
+}

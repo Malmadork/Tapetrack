@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/groupView.css">
+<link rel="stylesheet" href="/css/newGroupStyles.css">
+<link rel="stylesheet" href="/css/searchStyle.css">
+<script src="/js/referrer.js" defer></script>
+<script src="/js/renderAlbumSearch.js" type="module"></script>
+<script src="/js/renderGroupView.js" type="module"></script>
+<script src="/js/mobilenav/groups.js" type="module"></script>
+
+<div class="content">
+  <br>
+
+  <div id="groupError"></div>
+  <div id="group"></div>
+</div>
+
+
+<template id="groupTemplate">
+  <div class="group-wrapper">
+    <div class="group-view-container">
+      <div class="group-title-desc">
+          <h1 id="group-title"></h1>
+          <h2 id="group-members"><a class="groupMembers"></a></h2>
+      </div>
+      <img class="group-view-photo" src="" alt="Group photo" />
+      <div class="group-info">
+        <h3 id="group-desc"></h3>
+        <hr>
+        <h3>Top Albums in <a class="groupName"></a>:</h3>
+        <div class="group-album-carousel">
+        </div>
+      </div>
+    </div>
+    <div class="group-actions">
+      <a class="btn btn-1 group-add-album" id="addAlbum">Add Album</a>
+      <a class="btn btn-1 group-chat">Chat</a>
+    </div>
+    <a class="btn btn-2 group-action"></a>
+    <a class="btn group-delete">Delete Group</a>
+  </div>
+</template>
+
+<div class="popup-wrapper popup-2-wrapper">
+  <div class="popup popup-2">
+    <header class="popup-header">
+      <h1>Search for Albums</h1>
+      <i class="bi bi-x"></i>
+    </header>
+    <div class="search">
+      <div class="input-with-icon">
+        <input type="text" class="search-input" id="album-search" name="search" placeholder="Album Search">
+        <i class="bi bi-search album-search-btn" id="album-search-btn"></i>
+      </div>
+    </div>
+    <div id="albumList">
+    </div>
+  </div>
+</div>
+
+<template id="groupErrorTemplate">
+  <h1>Couldn't find group</h1>
+  <a class="btn btn-1" href="/groups/search">Go back</a>
+</template>
+
+<template id="albumTemplate">
+  <a class="albumLink" href="">
+    <div class="album-container">
+        <div class="cover-wrapper">
+          <img class="cover-art" src="" alt="album cover art" />
+        </div>
+        <div class="info">
+          <h1></h1>
+          <h2></h2>
+        </div>
+    </div>
+  </a>
+</template>

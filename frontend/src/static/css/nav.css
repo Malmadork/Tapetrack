@@ -1,0 +1,135 @@
+body {
+    padding-bottom: 15px;
+}
+
+.mobile-header {
+  visibility: visible;
+}
+
+.mobile-nav {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--container-dark-nav);
+
+    -webkit-user-select: none; /* Chrome/Safari */ 
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 16px;    
+    }
+
+    nav a i {
+      
+      color: var(--font-dark-nav);
+    }
+
+    .bi {
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 1.25em;
+    }
+
+    .active-tab {
+      background-color: var(--container-dark-tertiary);
+      color: var(--font-dark-nav-active);
+    }
+
+    .bi-plus-circle {
+      color: var(--font-dark-addreview);
+    }
+
+}
+
+.desktop-nav {
+    display: none;
+    height: 70px;
+    background-color: var(--container-dark-nav);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+}
+
+.desktop-nav nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#left-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#left-nav h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    color: var(--font-dark-nav);
+}
+
+#right-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#right-nav a {
+    text-decoration: none;
+    color: var(--font-dark-nav);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+}
+
+#buttons a {
+    white-space: nowrap;
+    color: var(--font-dark-btn);
+    text-wrap-mode: nowrap;
+}
+
+.nav-icon {
+  height: 2em;
+  width: auto;
+}
+
+@media screen and (max-width: 825px) {
+  .desktop-nav {
+    font-size: 80%;
+  }
+
+}
+
+@media screen and (min-width: 825px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .mobile-nav, .mobile-header {
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+}

@@ -1,0 +1,105 @@
+* {
+    scrollbar-width: none;
+}
+
+#chatContainer {
+    width: 100%;
+    border: none;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 170px);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#chatInputContainer {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    border: none;
+    z-index: 1000;
+}
+
+#chatInputContainer input {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--container-dark-nav);
+    border: 0;
+    color: var(--font-dark-btn);
+    font-size: 20px;
+}
+
+#chatInputContainer button {
+    padding: 10px 20px;
+    background-color: var(--container-dark-primary);
+    color: var(--font-dark-btn);
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.message {
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    max-width: 80%;
+    min-width: 100px;
+}
+
+.message .name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message.me {
+    background-color: #c29cdf;
+    border-radius: 10px 10px 0 10px;
+    align-self: flex-end;
+}
+
+.message.other {
+    background-color: #6b4892;
+    border-radius: 0 10px 10px 10px;
+    align-self: flex-start;
+}
+
+/* Service Worker */
+
+.popup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #6b4892;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+
+    box-shadow: 3px 3px 10px 0px black;
+}
+
+.popup div {
+    margin-bottom: 5px;
+}
+
+.popup button {
+    margin: 3px 5px;
+    background-color: white;
+    text-transform: uppercase;
+    border: 0;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 825px) {
+    #chatInputContainer {
+        bottom: 0;
+    }
+
+    #chatContainer {
+        height: calc(100vh - 150px);
+    }
+}

@@ -1,0 +1,42 @@
+/* .mobile-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+} */
+
+.search-wrapper {
+  background-color: var(--background-dark);
+  width: 100%;
+  background-clip: content-box;
+  display: none;
+  border: solid 0.1px transparent;
+  z-index: 1;
+}
+
+.dummy {
+  height: 0;
+  width: 100%;
+  margin: 0;
+  visibility: hidden;
+  /* background-color: var(--background-dark); */
+  position: relative;
+
+}
+
+#albumListWrapper {
+    margin: 32% 0 10% 0;
+}
+
+@media screen and (min-width: 825px) {
+
+   #albumListWrapper {
+        margin: 0;
+    }
+
+    .search-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+}

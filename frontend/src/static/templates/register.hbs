@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="../css/loginstyle.css">
+
+{{!-- <div class="header header-with-icon">
+    <div class="header-inner">
+        <div class="arrow-icon"><a class="referrer"><i class="bi bi-arrow-left-short"></i></a></div>
+        <h1 class="left-align title">Welcome Back!</h1>
+    </div>
+</div> --}}
+<div class="content">
+    <div class="login-container-outer">
+        <h2 class="left-align">Create an account</h2>
+        <form class="container" id="registerForm">
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-input">
+                <label for="password">Password</label>
+                <div class="input-with-icon">
+                    <input type="password" id="password" name="password" required />
+                    <i class="bi bi-eye-slash toggle-password-visibility" data-target="password"></i>
+                </div>
+            </div>
+
+            <div class="form-input">
+                <label for="verify-password">Verify Password</label>
+                <div class="input-with-icon">
+                    <input type="password" id="verify-password" name="verify-password" required>
+                    <i class="bi bi-eye-slash toggle-password-visibility" data-target="verify-password"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-1">Sign up</button>
+        </form>
+        <div class="container">
+            <h4>------------- or -------------</h4>
+            <br>
+            <h4>Already have an account?</h4>
+            <a class="btn btn-2" href="/login">Log in</a>
+            
+        </div>
+    </div>
+
+<script src="./js/register.js" type="module"></script>
+<script src="./js/passwordToggle.js" type="module"></script>

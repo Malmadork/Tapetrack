@@ -1,0 +1,65 @@
+<script src="/js/mobilenav/profile.js" defer></script>
+<script src="/js/referrer.js" defer></script>
+<script src="/js/userSettings.js" defer></script>
+<script src="/js/renderUserSettings.js" type="module"></script>
+<link rel="stylesheet" href="/css/settings.css">
+
+<div class="content">
+    <div class="section">
+        <div class="heading">
+            <h1>Account Settings</h1>
+        </div>
+        <div class="hr-spacer"></div>
+        <div id="accountSettings" class="settings-list">
+            <div class="setting" data-setting="password">
+                <h2>Update Password</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="section">
+        <div class="heading">
+            <h1>Privacy Settings</h1>
+        </div>
+        <div class="hr-spacer"></div>
+        <div id="privacySettings" class="settings-list">
+            <div class="setting" id="pushSettings">
+                <h2>Push Notifications</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+            <div class="hr-spacer"></div>
+            <div class="setting" id="visibilitySettings">
+                <h2>Account Visibility</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="section">
+        <div class="heading">
+            <h1>Other Settings</h1>
+        </div>
+        <div class="hr-spacer"></div>
+        <div id="otherSettings" class="settings-list">
+            {{!-- <div class="setting" id="cacheSettings">
+                <h2>Cache Settings</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+            <div class="hr-spacer"></div>
+            <div class="setting warning-setting" id="deleteCache">
+                <h2 >Delete Cache</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div> --}}
+            <div class="setting volatile-setting" id="deleteAccount">
+                <h2>Delete Account</h2>
+                <div class="settings-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+        </div>
+    </div>
+
+</div>

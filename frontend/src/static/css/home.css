@@ -1,0 +1,225 @@
+/* .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-dark-primary);
+
+    h1 {
+        font-size: 1.25em;
+    }
+} */
+
+/* #buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 6px;
+    padding: 0;
+
+    a {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        text-wrap-mode: nowrap;
+        color: var(--font-dark-tertiary);
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+} */
+
+
+
+.heading {
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.heading-with-icon i {
+    font-size: 1.25em;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px 15px 15px;
+}
+
+.section {
+    margin: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.albumList {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    
+    flex-wrap: nowrap;
+
+    .album-container {
+        width: 27vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 auto;
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        
+        h1 {
+            font-size: 16px;
+            /* text-wrap-mode: nowrap; */
+            white-space: normal;      /* allow wrapping */
+            word-wrap: break-word;    /* break long words if needed */
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.albumLink {
+    text-decoration: none;
+    color: var(--font-dark-secondary);
+}
+
+.album-container-detailed {  
+    display: grid;
+    grid-template-columns: .66fr 1.34fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    margin: 0 auto;
+    /* margin-bottom: 15px; */
+    grid-auto-flow: row;
+    grid-template-areas:
+        "cover-art info";
+    width: 100%;
+    /* aspect-ratio: 4 / 1; */
+    background-color: var(--container-dark-tertiary);
+    border: 2px solid var(--border-dark-secondary);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.cover-wrapper {
+    grid-area: cover-art;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    background-color: var(--background-dark);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cover-art { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.info { 
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px 10px;
+
+    h1, h2 {
+        margin: 0;
+        font-size: 1.15em;
+    }
+
+    h2 {
+        font-size: .8em;
+    }
+
+    .info-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        justify-self: end;
+        justify-content: end;
+        align-items: end;
+        font-size: .8em;
+        margin-right: 5px;
+        padding: 0;
+}
+}
+
+.mobile-header {
+    .nav-icon {
+      height: 2em;
+      width: auto;
+    }
+}
+
+
+
+@media screen and (min-width: 825px) {
+    .album-container-detailed {
+        width: 100%;
+    }
+
+    .content {
+        width: 85%;
+    }
+    
+    .header {
+        display: none;
+    }
+
+    .albumList {
+        scrollbar-width: none;
+        .album-container {
+            width: 10vw;
+        }
+    }
+
+    .album-container-detailed .info {
+    margin: 0.5em;
+    #albumName {
+        font-size: 1.5em;
+    }
+    #albumDesc {
+        margin-top: 0.10em;
+        font-size: 1em;
+    }
+    
+    }
+
+    .album-container-detailed .details {
+        margin-right: 1.1em;
+    }
+
+}

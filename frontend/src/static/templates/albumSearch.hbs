@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/searchStyle.css">
+<link rel="stylesheet" href="/css/albumSearch.css">
+<script src="/js/renderAlbumSearch.js" type="module"></script>
+<script src="/js/mobilenav/search.js" defer></script>
+
+{{!-- <div class="header-search-wrapper">
+  <div class="header">
+    <div class="header-inner">
+      <h1 class="left-align title">Search for Albums</h1>
+    </div>
+    <div id="buttons">
+        <a href="/login" class="btn btn-2 login-nav">Log In</a>
+        <a href="/register" class="btn btn-1 signup-nav">Sign Up</a>
+        <a class="btn btn-1 logout-nav">Log Out</a>
+    </div>
+  </div> --}}
+
+<div id="searchWrapper" class="search-wrapper" data-query="{{query}}">
+  <div class="search">
+    <div class="input-with-icon">
+      <input type="text" class="search-input" id="search" name="search" placeholder="Album/Artist" required>
+      <i class="bi bi-search album-search-btn" id="album-search-btn"></i>
+    </div>
+  </div>
+</div>
+
+{{!-- </div> --}}
+
+{{!-- <!-- Okay this is really dumb but its a temporary fix for the search styling.-->
+<div class="dummy-header">
+  <div class="header">
+    <div class="header-inner">
+      <h1 class="left-align title">Search for Albums</h1>
+    </div>
+  </div>
+
+  <div class="search">
+    <div class="input-with-icon">
+      <input type="text" class="search-input" placeholder="Album/Artist" required>
+      <i class="bi bi-search"></i>
+    </div>
+  </div>
+</div> --}}
+
+
+<div id="albumListWrapper">
+  <div id="albumList"></div>
+</div>
+
+<template id="albumTemplate">
+  <a class="albumLink" href="">
+    <div class="album-container">
+        <div class="cover-wrapper">
+          <img class="cover-art" src="" alt="album cover art" />
+        </div>
+        <div class="info">
+          <h1></h1>
+          <h2></h2>
+        </div>
+    </div>
+  </a>
+</template>

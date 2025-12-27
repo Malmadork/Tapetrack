@@ -1,0 +1,83 @@
+<script src="/js/mobilenav/profile.js" defer></script>
+<script src="/js/renderProfile.js" type="module"></script>
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="content" >
+    <div class="desktop-header">
+        <h1></h1>
+        <a href="/settings" class="settings-button"><i class="bi bi-gear-fill"></i></a>
+    </div>
+
+    <div class="section section-recents">
+        <div class="heading heading-with-icon">
+            <h1>Recently Reviewed</h1>
+        </div>
+        <div class="album" id="recentReview"></div>
+    </div>
+
+    <div class="section section-lists">
+        <a class="heading heading-with-icon lists-link">
+            <h1>Your Lists</h1>
+            <i class="bi bi-arrow-right"></i>
+            
+        </a>
+        <div class="lists listCarousel" id="listCarousel"></div>
+    </div>
+
+    <div class="section">
+        <a class="heading heading-with-icon reviews-link">
+            <h1>Your Reviews</h1>
+            <i class="bi bi-arrow-right"></i>
+
+    </div>
+</div>
+
+<template id="reviewTemplate">
+    <a class="reviewLink">
+        <div class="review-container-detailed">
+            <div class="cover-wrapper">
+                <img class="cover-art" src="" alt="album cover art" />
+            </div>
+            
+            <div class="info">
+                <div class="ranking-title">
+                    <h4 class="review-album-name">Album Name</h4>
+                    <div class="review-ranking">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    
+                </div>
+                <div class="review-text">
+                    <p></p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </a>
+</template>
+
+<template id="quadlistTemplate">
+    <a class="listLink">
+        <div class="list-container">
+            <div class="cover-art">
+                
+            </div>
+            <h1></h1>
+        </div>
+    </a>
+</template>
+
+
+<template id="listTemplate">
+    <a class="listLink">
+        <div class="list-container">
+            <img class="cover-art" src="" alt="album cover art" />
+            <h1></h1>
+        </div>
+    </a>
+</template>

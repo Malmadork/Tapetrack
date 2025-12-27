@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/groups.css">
+<link rel="stylesheet" href="/css/searchStyle.css">
+<script src="/js/mobilenav/groups.js" type="module"></script>
+
+<div class="content">
+    <div class="section">
+        <div class="no-groups">
+            <h4 id="no-groups-header">You aren't in any groups!</h4>
+            <div class="buttons">
+                <a class="btn btn-1" href="/groups/search">Find Groups</a>
+                <a class="btn btn-2" href="/groups/new">Create Group</a> 
+            </div>      
+        </div> 
+        <div id="groupListWrapper">
+          <div id="groupList"></div>
+        </div>
+    </div>  
+</div>
+
+<template id="groupTemplate">
+  <a class="groupLink" href="">
+    <div class="group-container">
+      <div class="cover-wrapper">
+        <img class="group-photo" src="" alt="Group photo" />
+      </div>
+      <div class="info">
+        <h1></h1>
+      </div>
+    </div>
+  </a>
+</template>
+

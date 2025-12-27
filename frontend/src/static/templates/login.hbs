@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="../css/loginstyle.css">
+<script src="/js/login.js" type="module"></script>
+
+{{!-- <div class="header header-with-icon">
+    <div class="header-inner">
+        <div class="arrow-icon"><a class="referrer"><i class="bi bi-arrow-left-short"></i></a></div>
+        <h1 class="left-align title">Welcome!</h1>
+    </div>
+</div> --}}
+<div class="content">
+    <div class="login-container-outer">
+        <form id="loginForm">
+            <h2 class="left-align">Log in to your account</h2>
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required />
+
+                <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="password" name="password" required />
+                        <i class="bi bi-eye-slash toggle-password-visibility" data-target="password"></i>
+                    </div>
+
+            </div>
+            {{!-- <div class="rememberMe">
+                <label for="remember-me">Remember me</label>
+                <input class="remember-me-box" type="checkbox" id="remember-me" name="remember-me">
+            </div> --}}
+
+            <input type="submit" class="btn btn-1" value="Log in">
+        </form>
+        <div class="container">
+            <h4>------------- or -------------</h4>
+            <br>
+            <h4>Don't have an account?</h4>
+            <a class="btn btn-2" href="/register">Sign up</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/passwordToggle.js" type="module"></script>

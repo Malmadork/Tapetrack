@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/searchStyle.css">
+<script src="/js/renderGroupSearch.js" type="module"></script>
+
+<link rel="stylesheet" href="/css/groups.css">
+{{!-- <script src="/js/groups.js" type="module"></script> --}}
+<script src="/js/mobilenav/groups.js" defer></script>
+
+  <div class="search">
+    <div class="input-with-icon">
+      <input type="text" class="search-input" id="group-search" name="search" placeholder="Group Search" required>
+      <i class="bi bi-search" id="group-search-btn"></i>
+    </div>
+  </div>
+
+<div class="content">
+  <div class="section">
+    <div id="groupList"></div>
+  </div>
+ 
+</div>
+
+<template id="groupTemplate">
+  <a class="groupLink" href="">
+    <div class="group-container">
+      <img class="group-photo" src="" alt="Group photo" />
+      <div class="info">
+        <h1></h1>
+      </div>
+    </div>
+  </a>
+</template>
+

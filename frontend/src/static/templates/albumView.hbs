@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/css/albumView.css">
+<script src="/js/referrer.js" defer></script>
+<script src="/js/mobilenav/search.js" type="module"></script>
+<script src="/js/renderAlbumView.js" type="module"></script>
+
+<div class="content">
+
+    <div id="albumError"></div>
+
+    <div class="popup-wrapper popup-2-wrapper">
+        <div class="popup popup-2">
+            <header class="popup-header">
+                <h1>Save to List</h1>
+            </header>
+
+            <div id="listList">
+                
+            </div>
+            <p class="no-lists"><i>*Record Scratch*</i> You have no lists.</p>
+            <div class="lists-buttons">
+                <div class="new-list">
+                    <p>New List</p>
+                </div>
+                <div class="close-list">
+                    <p>Done</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="album-template">
+    <div class="album-page">
+        <div class="section album-header">
+            <div class="album-header-top">
+                <div class="album-info">
+                    <h1 class="album-name">[AlbumName]</h1>
+                    <h2 class="album-artist">[ArtistName]</h2>
+                </div>
+                <div class="save-lists">
+                    <i class="bi bi-plus-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="section album-cover">
+            <div class="cover-wrapper">
+                <img class="cover-art" src="/images/placeholder.png" alt="album cover art" />
+            </div>
+            
+        </div>
+        <div class="section album-tracks">
+            <h3>Track List</h3>
+            <div id="trackList">
+                
+            </div>
+        </div>
+        <div class="section album-reviews">
+            <h3>User Reviews</h3>
+            <div id="userReviewsList">
+                
+            </div>
+
+            <div class="more-reviews" id="moreReviews">
+                <a data-id="{{albumId}}">
+                    <h3>More Reviews</h3>
+                    <div class="icon"><i class="bi bi-arrow-right-short"></i></div>
+                </a>
+            </div>
+            <div class="your-review" id="yourReview">
+                <a data-id="{{albumId}}">
+                    <h3>Add your review</h3>
+                    <div class="icon"><i class="bi bi-arrow-right-short"></i></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<template id="newListTemplate">
+    <div class="user-list new-user-list user-list-nosave">
+        <div class="list-name-wrapper">
+            <input class="list-name list-name-default" type="text" value="New List" maxlength="39">
+        </div>
+        <div class="list-info">
+            <div class="list-checkbox">
+                <i class="bi bi-square"></i>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="existingListTemplate">
+    <div class="user-list existing-user-list user-list-nosave" data-listId="">
+        <div class="list-name-wrapper">
+            <p class="list-name">list_name</p>
+        </div>
+        <div class="list-info">
+            <div class="list-checkbox">
+                <i class="bi bi-square"></i>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template id="track-template">
+    <div class="track">
+        <h4 class="track-name">Track Name</h4>
+        <h4 class="track-duration">1:59</h4>
+    </div>
+</template>
+
+<template id="review-template">
+    <div class="user-review">
+        <div class="ranking-username">
+            <h4 class="review-username">Username</h4>
+            <div class="review-ranking">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+            </div>
+            
+        </div>
+        <div class="review-text">
+            <p></p>
+        </div>
+    </div>
+</template>
+
+<template id="albumErrorTemplate">
+  <h1>Couldn't find album</h1>
+  <a class="btn btn-1" href="/search">Go back</a>
+</template>

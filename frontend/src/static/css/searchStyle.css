@@ -1,0 +1,249 @@
+.header-search-wrapper {
+    position: fixed;
+    top: 0;
+    background-color: var(--background-dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dummy-header-search {
+    width: 100%;
+    visibility: hidden;
+}
+
+.header {
+    position: relative;
+  
+
+  .title {
+    margin: 0;
+  }
+
+  .header-inner {
+    margin: 15px 12px;
+  }
+
+  
+}
+
+.header-with-icon {
+    .header-inner {
+        margin: 8px 12px;
+    }
+}
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 15px 5%;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+#albumListWrapper, #groupListWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+}
+
+#albumList, #groupList {
+    overflow-y: auto;
+    scrollbar-width: none;
+    min-height: 0px;
+    margin-bottom: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.center-no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 150px; 
+
+    h1 {
+        padding-top: 125px;
+    }
+}
+
+.cover-wrapper {
+    grid-area: cover;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cover-art,
+.group-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.albumLink,
+.groupLink {
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    text-decoration: none;
+    color: var(--font-dark-secondary);
+    background-color: var(--container-dark-tertiary);
+    border: 2px solid var(--border-dark-secondary);
+    border-radius: 15px;
+}
+
+.info {
+    grid-area: info;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info h1,
+.info h2 {
+    margin: 0;
+}
+
+
+/* .info { 
+    grid-area: info;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info h1, .info h2 {
+    margin: 0;
+} */
+
+.info h1 {
+        font-size: 1.15em;
+    }
+
+.info h2 {
+    font-size: 0.8em;
+}
+
+.album-container,
+.group-container {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: "cover info";
+    box-sizing: border-box;
+    color: var(--font-dark-secondary);
+}
+
+@media screen and (min-width: 825px) {
+    .searchWrapper {
+        margin-top: 100;
+    }
+    
+    .search {
+        width: 35%;
+    }
+
+    .search-input {
+        font-size: 18px;
+    }
+
+    .popup > #albumList .albumLink {
+        width: 100%;
+    }
+
+    .albumLink,
+    .groupLink {
+        width: 100%;
+        height: 150px;
+    }
+
+    .album-container,
+    .group-container {
+        grid-template-columns: 150px 1fr;
+        height: 150px;
+    }
+
+    .cover-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    #albumList, #groupList {
+        margin-bottom: 0px;
+        width: 100%;
+    }
+
+    #albumList {
+        margin-top: 85px;
+    }
+
+    #searchWrapper {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* stay above content */
+        background-color: var(--background-dark);
+    }
+
+    .center-no-results h1 {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .albumLink,
+    .groupLink {
+        width: 70%;
+    }
+
+    .popup > #albumList .albumLink {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .albumLink,
+    .groupLink {
+        width: 50%;
+    }
+
+    .popup > #albumList .albumLink {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .albumLink,
+    .groupLink {
+        width: 40%;
+    }
+
+    .popup > #albumList .albumLink {
+        width: 70%;
+    }
+}

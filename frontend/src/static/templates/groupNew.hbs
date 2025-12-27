@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="../css/newGroupStyles.css">
+<script src="/js/renderAlbumSearch.js" type="module"></script>
+<script src="/js/mobilenav/groups.js" defer></script>
+<script src="/js/groups-add.js" type="module"></script>
+<link rel="stylesheet" href="/css/searchStyle.css">
+
+<div class="content">
+    <div class="section">
+        <form id="add-group-form">
+            <div class="form-input">
+                <div class="desktop-title">
+                    <span>Create a Group</span>
+                </div>
+                <div class="group-add-wrapper">
+                    <div class="group-name-wrapper">
+                        <label for="group-name">Group Name</label>
+                        <input type="text" id="group-name" name="group-name" required>
+                    </div>
+                    <textarea id="group-desc" name="group-desc" placeholder="Group Description" maxlength="254"></textarea>
+
+                    <div class="group-album-wrapper">
+                        <img src="/images/placeholder.png" class="group-album">
+                        <div class="search-album-btn">
+                            <div class="album-info">
+                                <h3>Album Name</h3>
+                                <h4>Artist Name</h4>
+                            </div>
+                            <div class="no-album">
+                                <span class="no-album-text">Pick a highlighted album for this group.</span>
+                            </div>
+                            <a class="btn btn-1" id="findAlbum">Find Album</a>
+                        </div>
+                        <input type="hidden" id="selectedAlbumId" name="albumId">
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" class="btn btn-2" value="Create Group">
+
+        </form>
+    </div>
+
+    <div class="popup-wrapper popup-2-wrapper">
+        <div class="popup popup-2">
+            <header class="popup-header">
+                <h1>Search for Albums</h1>
+                <i class="bi bi-x"></i>
+            </header>
+                <div class="search">
+                    <div class="input-with-icon">
+                    <input type="text" class="search-input" id="album-search" name="search" placeholder="Album Search">
+                    <i class="bi bi-search album-search-btn" id="album-search-btn"></i>
+                    </div>
+                </div>
+            <div id="albumList">
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="albumTemplate">
+  <a class="albumLink" href="">
+    <div class="album-container">
+        <div class="cover-wrapper">
+          <img class="cover-art" src="" alt="album cover art" />
+        </div>
+        <div class="info">
+          <h1></h1>
+          <h2></h2>
+        </div>
+    </div>
+  </a>
+</template>

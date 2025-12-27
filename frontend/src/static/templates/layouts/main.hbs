@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>{{title}}</title>
+    <meta name="theme-color" content="#211f26" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="/images/icon/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="/images/icon/android-chrome-512x512.png">
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script src="/js/auth.js" type="module"></script>
+    <script src="/js/common.js" defer></script>
+</head>
+<body>    
+    {{#if authenticated}}
+
+    {{> desktop-nav }}
+
+    {{#if search}}
+    {{> mobile-header-search}}
+    {{else}}
+    {{> mobile-header}}
+    {{/if}}
+    <template id="messageTemplate">
+        <div id="messages" class="message-popup">
+            <div id="messageText"></div>
+        </div>
+    </template>
+    {{{body}}}
+    {{> mobile-nav }}
+
+    {{else}}
+
+    {{> desktop-nav-unauth }}
+
+    {{#if search}}
+    {{> mobile-header-search-unauth}}
+    {{else}}
+    {{> mobile-header-unauth}}
+    {{/if}}
+
+    <template id="messageTemplate">
+        <div id="messages" class="message-popup">
+            <span id="messageText"></span>
+        </div>
+    </template>
+
+    {{{body}}}
+    {{> mobile-nav-unauth }}
+
+    {{/if}}
+
+</body>
+</html>

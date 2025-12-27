@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/home.css">
+<script src="/js/mobilenav/home.js" defer></script>
+<script src="/js/renderAlbums.js" type="module"></script>
+<script src="/js/auth.js" type="module"></script>
+
+<div class="content">
+    <div class="section">
+        <div class="heading heading-with-icon">
+            <h1>Popular New Release</h1>
+        </div>
+        <div class="album" id="album-popular"></div>
+    </div>
+
+    <div class="section">
+        <div class="heading">
+            <h1>Popular Albums</h1>
+        </div>
+        <div class="albumList" id="albumList-popular"></div>
+    </div>
+
+    <div class="section">
+        <div class="heading">
+            <h1>Hot Albums</h1>
+        </div>
+        <div class="albumList" id="albumList-hot"></div>
+    </div>
+</div>
+
+<template id="albumTemplate-detailed">
+    <a class="albumLink" href="">
+        <div class="album-container-detailed">
+            <div class="cover-wrapper">
+                <img class="cover-art" src="" alt="album cover art" />
+            </div>
+            
+            <div class="info">
+                <div class="info-inner">
+                    <h1 id="albumName"></h1>
+                    <h2 id="albumDesc"></h2>
+                </div>
+                
+                <div class="details">
+                    <p id="tracks-runtime"></p>
+                </div>
+            </div>
+            
+        </div>
+    </a>
+</template>
+
+<template id="albumTemplate-simple">
+    <a class="albumLink" href="">
+        <div class="album-container">
+            <img class="cover-art" src="" alt="album cover art" />
+            <h1></h1>
+        </div>
+    </a>
+</template>

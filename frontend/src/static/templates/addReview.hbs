@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="/css/searchStyle.css">
+<link rel="stylesheet" href="/css/addReview.css">
+<script src="/js/renderAddReview.js" type="module"></script>
+<script src="/js/mobilenav/addreview.js" type="module"></script>
+
+
+<div id="searchWrapper" class="search-wrapper" data-query="{{query}}">
+  <div class="search">
+    <div class="input-with-icon">
+      <input type="text" class="search-input" id="search" name="search" placeholder="Album/Artist" required>
+      <i class="bi bi-search" id="album-search-btn"></i>
+    </div>
+  </div>
+</div>
+
+<div id="albumListWrapper">
+  <div id="albumList"></div>
+</div>
+
+<div id="selectedAlbumWrapper" data-preloadId="{{albumId}}">
+  <div id="selectedAlbum">
+
+  </div>
+</div>
+
+<div id="albumReviewWrapper">
+
+</div>
+
+<template id="reviewTemplate">
+  <div id="selectedAlbumReview" data-id="">
+    <form>
+      <div class="review-ranking" data-rank="0">
+        <i class="bi bi-star" data-star="1"></i>
+        <i class="bi bi-star" data-star="2"></i>
+        <i class="bi bi-star" data-star="3"></i>
+        <i class="bi bi-star" data-star="4"></i>
+        <i class="bi bi-star" data-star="5"></i>
+      </div>
+      <textarea placeholder="Write a review..." class="write-review" id="write-review" maxlength="254"></textarea>
+      <div id="trackHeader">
+        <h1>Pick a Favorite Track</h1>
+        <div class="dropdown-icon closed"><i class="bi bi-caret-right-fill"></i></div>
+      </div>
+      <div class="trackList">
+
+
+      </div>
+      <div id="submitReview" class="submitReview">
+        <a class="btn btn-1">Submit Review</a>
+      </div>
+      <div id="deleteReview" class="deleteReview">
+        <a class="btn btn-2">Delete Review</a>
+      </div>
+    </form>
+  </div>
+</template>
+
+
+<template id="albumTemplate">
+  <a class="albumLink" href="">
+    <div class="album-container">
+        <div class="cover-wrapper">
+          <img class="cover-art" src="" alt="album cover art" />
+        </div>
+        <div class="info">
+          <h1></h1>
+          <h2></h2>
+        </div>
+    </div>
+  </a>
+</template>
+
+<template id="selectedAlbumTemplate">
+  <a class="albumLink" href="">
+    <div class="album-container">
+        <div class="cover-wrapper">
+          <img class="cover-art" src="" alt="album cover art" />
+        </div>
+        <div class="info">
+          <h1></h1>
+          <h2></h2>
+        </div>
+    </div>
+  </a>
+</template>
+
+<template id="trackTemplate">
+  <div class="track" data-track-id="">
+      <h4 class="track-name">Track Name</h4>
+      <div class="heart-icon"><i class="bi bi-heart"></i></div>
+  </div>
+</template>
+
+<template id="messageTemplate">
+  <div id="messages" class="messages">
+    <p id="messageText"></p>
+  </div>
+</template>
+

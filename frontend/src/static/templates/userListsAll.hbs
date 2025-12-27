@@ -1,0 +1,64 @@
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/mobilenav/profile.js" defer></script>
+<script src="/js/referrer.js" defer></script>
+<script src="/js/renderUserListsAll.js" type="module"></script>
+<link rel="stylesheet" href="/css/userListsAll.css">
+
+
+<div class="content" data-userId="{{userId}}" data-listId="{{listId}}">
+  <div class="lists listCarousel" id="listCarousel"></div>
+  <p class="emptyList">*Record Scratch* This list is empty!</p>
+  <div class="section-filter">
+    <div class="dropdown">
+      <i class="bi bi-filter-square-fill" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" data-filter="recent">Most Recent</a>
+        <a class="dropdown-item" data-filter="oldest">Oldest</a>
+        <a class="dropdown-item" data-filter="asc">Ascending</a>
+        <a class="dropdown-item" data-filter="desc">Descending</a>
+      </div>
+    </div>
+  </div>
+  <div class="section section-albums">
+      <div class="listAlbums" id="listAlbums">
+        
+      </div>
+    </div>
+    
+</div>
+
+<template id="listItemTemplate">
+  <div class="listItem">
+    <h2 class="listName"></h2>
+  </div>
+</template>
+
+<template id="albumTemplate">
+  <div class="album-container">
+    <div class="dropdown">
+      <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="cover-art" src="" alt="album cover art" />
+        <h1></h1>
+      </div>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" data-action="remove">Remove</a>
+      </div>
+    </div>
+
+  </div>
+  {{!-- <div class="album-container">
+    <div class="dropdown">
+      <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="cover-art" src="" alt="album cover art" />
+        <h1></h1>
+      </div>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" data-action="remove">Remove</a>
+      </div>
+    </div>
+
+  </div> --}}
+  
+</template>

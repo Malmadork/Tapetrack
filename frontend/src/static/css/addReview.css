@@ -1,0 +1,162 @@
+.search-wrapper {
+  background-color: var(--background-dark);
+  width: 100%;
+  background-clip: content-box;
+  display: none;
+  border: solid 0.1px transparent;
+  z-index: 1;
+}
+
+.dummy {
+  height: 0;
+  width: 100%;
+  margin: 0;
+  visibility: hidden;
+  /* background-color: var(--background-dark); */
+  position: relative;
+
+}
+
+/* #searchWrapper {
+  position: fixed;
+  margin-top: 53px;
+  background-color: var(--background-dark);
+  width: 100%;
+  background-clip: content-box;
+  display: block;
+  border: solid 0.1px transparent;
+  z-index: 1;
+} */
+
+#selectedAlbumWrapper {
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    margin-top: 150px;
+}
+
+#selectedAlbum {
+    flex: 1 1 auto;
+    min-height: 0px;
+    margin: 0px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.list-hidden {
+  margin: 0;
+}
+
+.review-ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+
+    i {
+        font-size: 2em;
+    }
+}
+
+#selectedAlbumReview {
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  margin: auto;
+  margin-top: 15px;
+
+  textarea {
+    width: 100%;
+    aspect-ratio: 5/2;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+}
+
+#trackHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .dropdown-icon {
+    font-size: 2em;
+  }
+}
+
+#albumReviewWrapper {
+  width: 100%;
+}
+
+.trackList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 5px;
+    display: none;
+}
+
+.submitReview {
+  /* margin-bottom: 100px; */
+  margin-bottom: 20px;
+}
+
+.deleteReview {
+  display: none;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--border-dark-secondary);
+
+    h4 {
+        margin: 2px;
+        font-size: 1em;
+    }
+}
+
+.messages {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  padding: 5px 15px;
+  margin: auto;
+  background-color: rgba(20, 200, 20, .5);
+}
+
+.hidden-messages {
+  display: none;
+}
+
+@media screen and (min-width: 825px) {
+
+    .search-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    #albumListWrapper {
+      margin: 0;
+    }
+
+    #selectedAlbumWrapper {
+      margin-top: 85px;
+      width: 40%;
+    }
+
+    #selectedAlbumReview {
+      width: 50%;
+    }
+  }

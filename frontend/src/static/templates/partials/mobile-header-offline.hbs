@@ -1,0 +1,14 @@
+<div class="mobile-header header-with-icon header">
+    <div class="mobile-header-inner">
+        <div class="arrow-icon disabled"><a href="" class="referrer"><i class="bi bi-arrow-left-short"></i></a></div>
+        {{#if logo}}
+        <a href="/"><img src="/images/tapetrack-160x160.png" srcset="/images/tapetrack-160x160.svg" class="nav-icon"></a>
+        {{else}}
+        <h1 class="left-align title">{{title}}</h1>
+        {{/if}}
+    </div>
+    <div id="buttons">
+        <a href="/login" class="btn btn-2 login-nav" style="visibility: hidden">Log In</a>
+        <a href="/register" class="btn btn-1 signup-nav" style="visibility: hidden">Sign Up</a>
+    </div>
+</div>

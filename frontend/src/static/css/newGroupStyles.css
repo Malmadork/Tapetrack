@@ -1,0 +1,187 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.header-with-icon {
+    .header-inner {
+        margin: 8px 12px;
+    }
+}
+
+form {
+    width: 100%;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    margin-top: 30px;
+}
+
+.group-name-wrapper, .group-album-wrapper {
+    display: relative;
+    width: 100%;
+}
+
+.group-add-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.group-album-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: .7fr 1.3fr; 
+    grid-template-rows: 1fr; 
+    gap: 0 15px; 
+    grid-template-areas: 
+    "group-album search-album-btn"; 
+}
+
+.group-album {
+    grid-area: group-album;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.search-album-btn {
+    grid-area: search-album-btn;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    h3, h4 {
+        align-self: flex-start;
+        margin: 5px 0;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .album-info {
+        display: none;
+    }
+}
+
+.no-album {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-album-text {
+    text-align: center;
+    display: block;
+}
+
+textarea {
+    border-radius: 5px;
+    border: none;
+    background-color: #e6e0e9;
+    height: 150px;
+    font-size: 14px;
+    width: 100%;
+    text-indent: 15px;
+    padding-top: 15px;
+    resize: none;
+}
+
+.popup-2-wrapper {
+    display: none;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px 0 15px;
+
+    i {
+        font-size: 36px;
+    }
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+}
+
+#albumList {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 825px) {
+    .form-input {
+        max-width: 50%;
+        label {
+            font-size: 15px;
+        }
+    }
+
+    .group-add-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    #group-name {
+        font-size: 15px;
+        padding-top: 25px;
+        padding-bottom: 5px;
+    }
+
+    .desktop-title {
+        font-size: 2.5em;
+    }
+
+    #group-desc {
+        font-size: 15px;
+    }
+
+    .group-album-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 30%;
+        }
+    }
+
+    .search-album-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin: 0;
+
+        #findAlbum {
+            max-width: 50%;
+            font-size: 16px;
+        }
+    }
+
+    .no-album {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .desktop-title {
+        display: none;
+    }
+}

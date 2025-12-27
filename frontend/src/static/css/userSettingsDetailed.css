@@ -1,0 +1,78 @@
+.content {
+    margin-top: 10px;
+}
+
+.section {
+    margin: 10px 10px 25px 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.heading {
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+        font-size: 1.75em;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.setting {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    .settings-arrow {
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+}
+
+.warning-setting {
+    h2 {
+        color: var(--font-dark-warning);
+    }
+}
+
+.volatile-setting {
+    h2 {
+        color: var(--font-dark-volatile);
+    }
+}
+
+.messages {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  padding: 5px 15px;
+  margin: auto;
+  background-color: rgba(20, 200, 20, .5);
+}
+
+.hidden-messages {
+  display: none;
+}
+
+@media screen and (min-width: 825px) {
+    .content {
+        width: 50%;
+    }
+}

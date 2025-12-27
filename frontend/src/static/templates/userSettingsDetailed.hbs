@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/userSettingsDetailed.css">
+<script src="/js/referrer.js" defer></script>
+<script src="/js/mobilenav/profile.js" defer></script>
+<script src="/js/renderUserSettingsDetailed.js" type="module"></script>
+
+{{!-- <div class="header header-with-icon">
+    <div class="header-inner">
+      <div class="arrow-icon"><a class="referrer"><i class="bi bi-arrow-left-short"></i></a></div>
+      <h1 class="left-align title">Settings</h1>
+    </div>
+    <div id="buttons">
+        <a class="btn btn-1">Sign Out</a>
+    </div>
+</div>
+
+<div class="dummy-header header header-with-icon">
+    <div class="header-inner">
+      <div class="arrow-icon"><i class="bi bi-arrow-left-short"></i></div>
+      <h1 class="left-align title">Settings</h1>
+    </div>
+    <div id="buttons">
+        <a class="btn btn-1">Sign Out</a>
+    </div>
+    
+</div> --}}
+
+<div id="contentBody" class="content" data-setting={{setting}}>
+    {{!-- <div class="section">
+        
+    </div> --}}
+
+</div>
+
+<template id="updatePasswordTemplate">
+    <form class="container update-password" id="updatePassword">
+        <h2>Update Password</h2>
+        <div class="form-input">
+            <label for="password">Password</label>
+            <div class="input-with-icon">
+                <input type="password" id="password" name="password" required />
+                <i class="bi bi-eye-slash toggle-password-visibility" data-target="password"></i>
+            </div>
+        </div>
+
+        <div class="form-input">
+            <label for="verify-password">Verify Password</label>
+            <div class="input-with-icon">
+                <input type="password" id="verify-password" name="verify-password" required>
+                <i class="bi bi-eye-slash toggle-password-visibility" data-target="verify-password"></i>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-1">Update Password</button>
+    </form>
+</template>
+
+
+<template id="messageTemplate">
+  <div id="messages" class="messages">
+    <p id="messageText"></p>
+  </div>
+</template>

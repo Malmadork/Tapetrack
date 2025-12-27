@@ -1,0 +1,73 @@
+.section {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h3 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+        color: var(--accent-dark-tertiary);
+        font-size: 1.5em
+    }
+}
+
+#userReviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.user-review {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    h4 {
+        font-size: 1.15em;
+        color: var(--font-dark-username);
+        /* text-decoration: underline  dotted 1px; */
+    }
+
+    p {
+        margin: 0px 0px;
+    }
+    
+}
+
+.ranking-username {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-with-icon {
+    .header-inner {
+        margin: 8px 12px;
+    }
+}
+
+.like-dislike, .likes, .dislikes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.like-dislike {
+    gap: 15px;
+    align-self: flex-end;
+}
+
+
