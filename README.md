@@ -106,7 +106,7 @@ Method | Route                               | Description
 
 ## Database ER Diagram
 
-![](https://github.com/ncstate-csc-coursework/csc342-2025Fall-TeamE/blob/main/Final/frontend/src/static/images/tapetrack-ER-diagram.png?raw=true)
+![](https://github.com/Malmadork/Tapetrack/blob/main/frontend/src/static/images/tapetrack-ER-diagram.png?raw=true)
 
 ## Team Member Contributions
 
